@@ -1,0 +1,18 @@
+name: Update Infrastructure 
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infra
+    steps:
+    - uses: actions/checkout@master
+    - uses: hashicorp/setup-terraform@v1
+    - run: terraform init
+    - run: terraform apply -auto-approve
