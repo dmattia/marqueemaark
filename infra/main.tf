@@ -1,6 +1,6 @@
 provider "aws" {
-  version = "~> 3.0"
-  region  = "us-east-1"
+  version = "~> 2.0"
+  region = "us-east-1"
 }
 
 locals {
@@ -12,17 +12,17 @@ module "cloudfront-s3-cdn" {
   source  = "cloudposse/cloudfront-s3-cdn/aws"
   version = "0.33.0"
 
-  name = "marquee-mark"
+  name               = "marquee-mark"
   encryption_enabled = true
 
-#   parent_zone_id = data.aws_route53_zone.zone.id
-#   acm_certificate_arn = module.acm.this_acm_certificate_arn
-#   aliases = [local.domain]
+  #   parent_zone_id = data.aws_route53_zone.zone.id
+  #   acm_certificate_arn = module.acm.this_acm_certificate_arn
+  #   aliases = [local.domain]
   ipv6_enabled = true
 
   // Caching Settings
   default_ttl = 300
-  compress = true
+  compress    = true
 
   # Website settings
   website_enabled = true
