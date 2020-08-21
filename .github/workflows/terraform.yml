@@ -19,3 +19,5 @@ jobs:
     - run: terraform init
     - run: terraform validate -no-color
     - run: terraform apply -auto-approve
+      env:
+        AWS_REGION: us-east-1
