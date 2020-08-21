@@ -15,4 +15,5 @@ jobs:
     - uses: actions/checkout@master
     - uses: hashicorp/setup-terraform@v1
     - run: terraform init
+    - run: terraform validate -no-color
     - run: terraform apply -auto-approve
