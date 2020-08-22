@@ -1,1 +1,2 @@
-![Update Infrastructure](https://github.com/dmattia/marqueemaark/workflows/Update%20Infrastructure/badge.svg)
+![Website up to date](https://github.com/dmattia/marqueemaark/workflows/Upload%20Website/badge.svg)
+![Infrastructure up to date](https://github.com/dmattia/marqueemaark/workflows/Update%20Infrastructure/badge.svg)
